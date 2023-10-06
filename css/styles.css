@@ -705,6 +705,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     margin-bottom: 8px;
 }
 
+.modal-field-textarea {
+    margin-bottom: 16px;
+}
+
 .modal-form-btn {
     background-color: #4D5AE5;
     color: #ffffff;;
@@ -777,8 +781,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 400;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    display: flex;
-    align-items: center;
     margin-top: 16px;
 }
 
