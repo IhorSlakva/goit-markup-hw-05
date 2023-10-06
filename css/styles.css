@@ -546,6 +546,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 24px;
 }
 
 .footer-text-form{
@@ -567,17 +568,17 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: transparent;
     margin-right: 24px;
     padding-left: 16px;
-}
-
-.footer-input::placeholder {
     color: #ffffff;
     font-size: 12px;
     font-weight: 400;
     line-height: 2;
     letter-spacing: 0.04em;
+    
 }
 
+
 .footer-btn-form {
+    min-width: 165px;
     color: #ffffff;
     text-align: center;
     font-size: 16px;
@@ -591,11 +592,12 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    cursor: pointer;
 }
 
 .icon-footer-frame {
     fill: #ffffff;
+    margin-left: 16px;
 }
 
 /* ============================== */
@@ -630,6 +632,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 72px 24px 24px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close {
@@ -645,18 +651,23 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
     justify-content: center;
     padding: 0;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .modal-icon-close {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn-close:active {
+.modal-btn-close:hover,
+.modal-btn-close:focus {
     background-color: #404bbf;
+    border: none;
 }
 
-.modal-btn-close:active .modal-icon-close {
+.modal-btn-close:hover .modal-icon-close,
+.modal-btn-close:focus .modal-icon-close {
     fill: #ffffff;
 }
 
@@ -691,7 +702,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-field {
-    margin-bottom: 8px;
+    margin-bottom: 24px;
 }
 
 .modal-form-btn {
@@ -700,7 +711,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 4px;
     border: none;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     padding: 16px 32px;
     text-align: center;
@@ -710,6 +721,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.04em;
     margin: 24px auto;
     display: block;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-label {
@@ -746,14 +759,15 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 8px 16px;
     resize: none;
+    color: rgba(46, 47, 66, 0.4);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 
-.modal-textarea::placeholder {
-    color: rgba(46, 47, 66, 0.40);
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
+.modal-textarea:focus {
+    border-color: #4D5AE5;
 }
 
 .check-text {
@@ -780,17 +794,19 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.40);
-    border-radius: 6px;
+    border-radius: 2px;
     display: block;
     margin-right: 8px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-check:checked + .check-text .check-text-icon {
-    background-color: #4D5AE5;
+.modal-check:checked + .check-text span {
+    background-color: #404bbf;
     border: none;
-    fill: #ffffff;
+    fill: #f4f4fd;
 }

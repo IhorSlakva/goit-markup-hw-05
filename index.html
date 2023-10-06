@@ -504,12 +504,14 @@
         <div class="footer-form-container">
           <p class="footer-text-form">Subscribe</p>
           <form class="footer-form">
-            <input
-              type="text"
-              class="footer-input"
-              name="user-email"
-              placeholder="E-mail"
-            />
+            <label class="footer-form-label" for="user-email">
+              <input
+                type="email"
+                class="footer-input"
+                name="user-email"
+                placeholder="E-mail"
+              />
+            </label>
             <button type="submit" class="footer-btn-form">
               Subscribe
               <svg class="icon-footer-frame" width="24" height="24">
@@ -525,7 +527,7 @@
 
     <!--------------- Backdrop --------------->
 
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button type="button" class="modal-btn-close">
           <svg class="modal-icon-close" width="8" height="8">
@@ -577,10 +579,10 @@
             </div>
           </div>
           <div class="modal-field">
-            <label for="user-text" class="modal-label">Comment</label>
+            <label for="user-comment" class="modal-label">Comment</label>
             <textarea
-              name="user-text"
-              id="user-text"
+              name="user-comment"
+              id="user-comment"
               class="modal-textarea"
               placeholder="Text input"
             ></textarea>
@@ -589,15 +591,16 @@
             <input
               class="modal-check visually-hidden"
               type="checkbox"
-              name="privacy-policy"
-              id="privacy-policy"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
             />
-            <label for="privacy-policy" class="check-text"
+            <label for="user-privacy" class="check-text"
               ><span class="check-text-icon"
                 ><svg class="icon-check" width="10" height="8">
                   <use href="./images/icons.svg#icon-vector"></use></svg></span
               >I accept the terms and conditions of the
-              <a href="">Privacy Policy</a></label
+              <a href="" class="check-text-link">Privacy Policy</a></label
             >
           </div>
           <button type="submit" class="modal-form-btn">Send</button>
